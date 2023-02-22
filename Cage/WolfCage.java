@@ -1,12 +1,10 @@
 package Cage;
 
-import Animals.Animal;
-import Animals.Wolf;
+import Animals.*;
 
-import java.util.ArrayList;
-import java.util.Random;
+import java.util.*;
 
-public class WolfCage implements AnimalCage {
+public class WolfCage implements AnimalCage, Iterable<Wolf> {
     protected int cleanCage;
     protected ArrayList<Wolf> wolfs;
 
@@ -56,6 +54,22 @@ public class WolfCage implements AnimalCage {
                 wolf.feed(foodWeight);
 
             }
+    }
+    public void sortWright(){
+        Comparator newc = new WolfComparator();
+        //Comparator dd = wolfs.sort(newc);
+        //return dd;
+        wolfs.sort(newc);
+        //wolfs.sort(new WolfComparator());
+    }
+
+    @Override
+    public Iterator<Wolf> iterator() {
+        return new WolfIterator(wolfs);
+    }
+
+    public void wolfAgeSort(){
+        Collections.sort(wolfs, new WolfYearComparator());
     }
 
 }
