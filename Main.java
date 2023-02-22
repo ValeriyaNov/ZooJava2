@@ -20,9 +20,7 @@ public class Main {
         //System.out.println((wolfInCage.getRandomAnimal()).toString());
         //wolfInCage.giveFood(2);
         wolfInCage.sortWright();
-        //Comparator gf = wolfInCage.sortWright();
-        //wolfInCage.sortWright();
-        //WolfFactory.PrintWolfCage(wolfs);
+
         for (Wolf wolf : wolfInCage) {
             System.out.printf("Окрас %s, Год рождения %d, Вес %d, Количество конечностей %d \n", wolf.getColor(), wolf.getYear(), wolf.getWeight(), wolf.getCountLimbs());
 

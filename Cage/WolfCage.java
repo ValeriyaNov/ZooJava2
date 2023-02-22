@@ -57,10 +57,8 @@ public class WolfCage implements AnimalCage, Iterable<Wolf> {
     }
     public void sortWright(){
         Comparator newc = new WolfComparator();
-        //Comparator dd = wolfs.sort(newc);
-        //return dd;
         wolfs.sort(newc);
-        //wolfs.sort(new WolfComparator());
+
     }
 
     @Override
