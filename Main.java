@@ -2,6 +2,7 @@ import Animals.Animal;
 import Animals.Wolf;
 import Cage.WolfCage;
 import Factory.WolfFactory;
+import animalUtils.AnimalUtils;
 
 import java.util.ArrayList;
 import java.util.Comparator;
@@ -18,17 +19,18 @@ public class Main {
 
         //System.out.print("Random wolf: ");
         //System.out.println((wolfInCage.getRandomAnimal()).toString());
-        //wolfInCage.giveFood(2);
-        wolfInCage.sortWright();
-
+        //wolfInCage.giveFood(20);
+        //wolfInCage.sortWright();
+        AnimalUtils.sortByAge(wolfs);
+        System.out.println(wolfs);
         for (Wolf wolf : wolfInCage) {
             System.out.printf("Окрас %s, Год рождения %d, Вес %d, Количество конечностей %d \n", wolf.getColor(), wolf.getYear(), wolf.getWeight(), wolf.getCountLimbs());
 
-        }
-        System.out.println("After sort year ");
-        wolfInCage.wolfAgeSort();
-        for (Wolf wolf : wolfInCage) {
-            System.out.printf("Окрас %s, Год рождения %d, Вес %d, Количество конечностей %d \n", wolf.getColor(), wolf.getYear(), wolf.getWeight(), wolf.getCountLimbs());
+        //}
+        //System.out.println("After sort year ");
+        //wolfInCage.wolfAgeSort();
+        //for (Wolf wolf : wolfInCage) {
+            //System.out.printf("Окрас %s, Год рождения %d, Вес %d, Количество конечностей %d \n", wolf.getColor(), wolf.getYear(), wolf.getWeight(), wolf.getCountLimbs());
 
 
         }

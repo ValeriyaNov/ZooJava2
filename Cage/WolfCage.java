@@ -4,7 +4,7 @@ import Animals.*;
 
 import java.util.*;
 
-public class WolfCage implements AnimalCage, Iterable<Wolf> {
+public class WolfCage implements AnimalCage<Wolf>, Iterable<Wolf> {
     protected int cleanCage;
     protected ArrayList<Wolf> wolfs;
 
@@ -22,11 +22,12 @@ public class WolfCage implements AnimalCage, Iterable<Wolf> {
     }
 
     @Override
-    public void addAnimal(Animal animal) {
+    public void addAnimal(Wolf animal) {
         if (animal instanceof Wolf) {
             wolfs.add((Wolf) animal);
         }
     }
+
 
     @Override
     public int cleanCase() {
@@ -51,7 +52,7 @@ public class WolfCage implements AnimalCage, Iterable<Wolf> {
     @Override
     public void giveFood(int foodWeight) {
             for (Wolf wolf : wolfs) {
-                wolf.feed(foodWeight);
+                wolf.feed(foodWeight/ wolfs.size());
 
             }
     }
