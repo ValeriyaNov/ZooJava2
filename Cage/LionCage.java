@@ -44,7 +44,7 @@ public class LionCage implements AnimalCage<Lion> {
         for (int i = 0; i < lion.size(); i++) {
             if (i == randomIndex) {
                 System.out.println(lion.get(i));
-                return lion.get(i);
+                return lion.remove(i);
             }
         }
         Lion nullLion = new Lion(0,0,0,0);

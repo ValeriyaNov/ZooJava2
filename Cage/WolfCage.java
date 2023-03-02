@@ -43,7 +43,7 @@ public class WolfCage implements AnimalCage<Wolf>, Iterable<Wolf> {
         for (int i = 0; i < wolfs.size(); i++) {
             if (i == randomIndex) {
                 System.out.println((Wolf) wolfs.get(i));
-                return (Wolf) wolfs.get(i);
+                return (Wolf) wolfs.remove(i);
             }
         }
         Wolf nullWolf = new Wolf(0, 0, 0, "null");
