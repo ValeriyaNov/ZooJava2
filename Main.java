@@ -8,6 +8,7 @@ import terminal.TerminalReader;
 import zoo.Zoo;
 
 import java.util.ArrayList;
+//Необходимо все данные вводить в консоль через запятую без пробела
 
 public class Main {
     public static void main(String[] args) {
