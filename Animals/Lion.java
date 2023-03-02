@@ -7,7 +7,7 @@ public class Lion extends Animal implements Comparable<Lion> {
 
     private int maneVolume;
 
-    public Lion(String nickName, int yearBirth, int weight, int legs, int maneVolume) {
+    public Lion(int yearBirth, int weight, int legs, int maneVolume) {
         super(yearBirth, weight, legs);
         this.maneVolume = maneVolume;
     }
@@ -25,7 +25,7 @@ public class Lion extends Animal implements Comparable<Lion> {
     }
 
     @Override
-    void feed(int foodWeight) {
+    public void feed(int foodWeight) {
 
     }
 

@@ -23,9 +23,9 @@ public class WolfCage implements AnimalCage<Wolf>, Iterable<Wolf> {
 
     @Override
     public void addAnimal(Wolf animal) {
-        if (animal instanceof Wolf) {
-            wolfs.add((Wolf) animal);
-        }
+
+            wolfs.add(animal);
+
     }
 
 
@@ -42,6 +42,7 @@ public class WolfCage implements AnimalCage<Wolf>, Iterable<Wolf> {
 
         for (int i = 0; i < wolfs.size(); i++) {
             if (i == randomIndex) {
+                System.out.println((Wolf) wolfs.get(i));
                 return (Wolf) wolfs.get(i);
             }
         }
