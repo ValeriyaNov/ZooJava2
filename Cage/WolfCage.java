@@ -8,7 +8,7 @@ public class WolfCage implements AnimalCage<Wolf>, Iterable<Wolf> {
     protected int cleanCage;
     protected ArrayList<Wolf> wolfs;
 
-    public WolfCage(ArrayList<Wolf> wolfs){
+    public WolfCage(ArrayList<Wolf> wolfs) {
         this.wolfs = wolfs;
     }
 
@@ -17,14 +17,14 @@ public class WolfCage implements AnimalCage<Wolf>, Iterable<Wolf> {
         return wolfs;
     }
 
-    public void setWolfs(ArrayList<Wolf> wolfs){
+    public void setWolfs(ArrayList<Wolf> wolfs) {
         this.wolfs = wolfs;
     }
 
     @Override
     public void addAnimal(Wolf animal) {
 
-            wolfs.add(animal);
+        wolfs.add(animal);
 
     }
 
@@ -52,12 +52,13 @@ public class WolfCage implements AnimalCage<Wolf>, Iterable<Wolf> {
 
     @Override
     public void giveFood(int foodWeight) {
-            for (Wolf wolf : wolfs) {
-                wolf.feed(foodWeight/ wolfs.size());
+        for (Wolf wolf : wolfs) {
+            wolf.feed(foodWeight / wolfs.size());
 
-            }
+        }
     }
-    public void sortWright(){
+
+    public void sortWright() {
         Comparator newc = new WolfComparator();
         wolfs.sort(newc);
 
@@ -68,8 +69,18 @@ public class WolfCage implements AnimalCage<Wolf>, Iterable<Wolf> {
         return new WolfIterator(wolfs);
     }
 
-    public void wolfAgeSort(){
+    public void wolfAgeSort() {
         Collections.sort(wolfs, new WolfYearComparator());
     }
 
+    @Override
+    public String toString() {
+        String str = " ";
+        for (Wolf s : wolfs) {
+            str = str + s.toString() + " \n";
+
+        }
+        return str;
+
+    }
 }

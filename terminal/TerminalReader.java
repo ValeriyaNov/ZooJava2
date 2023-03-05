@@ -43,10 +43,10 @@ public class TerminalReader {
                 new AddMenu();
                 //System.out.println("Введите параметры животного: год рождения, вес, объем гривы(для льва) или окрас(для волка)");
                 String inputAdd = scanner.nextLine();
-                System.out.println(inputAdd);//удалить потом
+                //System.out.println(inputAdd);//удалить потом
 
                 input = input +" "+inputAdd;
-                System.out.println(input);//удалить потом
+                //System.out.println(input);//удалить потом
             }
 
             if (true){

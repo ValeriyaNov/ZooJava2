@@ -58,4 +58,13 @@ public class LionCage implements AnimalCage<Lion> {
 
         }
     }
+    @Override
+    public String toString() {
+        String str = " ";
+        for (Lion s: lion){
+            str = str + s.toString() + " \n";
+
+        }
+        return str;
+    }
 }

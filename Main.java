@@ -44,16 +44,18 @@ public class Main {
 
 
         Zoo zoo = new Zoo(wolfInCage, lionInCage, null);
+        System.out.println(zoo.toString());
         TerminalReader terminal = new TerminalReader(new AnimalCommandParser());
         terminal.setZoo(zoo);
         terminal.endless();
         System.out.println("________________________");
+        System.out.println(zoo.toString());
         //System.out.println(wolfInCage);
         //System.out.println(lionInCage);
-        for (Wolf wolf : wolfInCage) {
-            System.out.printf("Окрас %s, Год рождения %d, Вес %d, Количество конечностей %d \n", wolf.getColor(), wolf.getYear(), wolf.getWeight(), wolf.getCountLimbs());
+        //for (Wolf wolf : wolfInCage) {
+            //System.out.printf("Окрас %s, Год рождения %d, Вес %d, Количество конечностей %d \n", wolf.getColor(), wolf.getYear(), wolf.getWeight(), wolf.getCountLimbs());
 
-            }
+            //}
         }
     }
 

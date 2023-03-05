@@ -4,6 +4,8 @@ import Animals.Lion;
 import Animals.Snake;
 import Animals.Wolf;
 import Cage.AnimalCage;
+import Cage.LionCage;
+import Cage.WolfCage;
 
 public class Zoo {
     private AnimalCage<Wolf> wolfCage;
@@ -17,20 +19,28 @@ public class Zoo {
     }
 
 
-    public Wolf takeOfWolf(){
+    public Wolf takeOfWolf() {
         return this.wolfCage.getRandomAnimal();
     }
 
-    public void addWolf(Wolf animal){
+    public void addWolf(Wolf animal) {
         this.wolfCage.addAnimal(animal);
     }
 
-    public Lion takeOfLion(){
+    public Lion takeOfLion() {
 
         return this.lionCage.getRandomAnimal();
     }
 
-    public void addLion(Lion animal){
-         this.lionCage.addAnimal(animal);
+    public void addLion(Lion animal) {
+        this.lionCage.addAnimal(animal);
+    }
+
+
+    @Override
+    public String toString() {
+        return "Zoo: " +
+                "wolfs: " + wolfCage.toString() +";" +
+                "lions: " + lionCage.toString() ;
     }
 }

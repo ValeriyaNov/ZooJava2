@@ -1,10 +1,10 @@
 package terminal;
 
 public enum EnumCommand {
-    //WOLF_DELETE("wolfdelete", 2, new DeleteWolfExecutable()),
-    //WOLF_CREATE("wolfcreate", 6, new CreateWolfExecutable()),
-    LION_DELETE("liondelete", 2, new DeleteLionExecutable()),
-    LION_CREATE("lioncreate", 6 , new CreateLionExecutable()),
+    WOLF_DELETE("вывестиволк", 2, new DeleteWolfExecutable()),
+    WOLF_CREATE("добавитьволк", 6, new CreateWolfExecutable()),
+    LION_DELETE("вывестилев", 2, new DeleteLionExecutable()),
+    LION_CREATE("добавитьлев", 6, new CreateLionExecutable()),
     ;
 
     private final String title;
@@ -13,11 +13,12 @@ public enum EnumCommand {
 
     private CommandExecutable method;
 
-    EnumCommand(String wolfdelete, int i, CommandExecutable method) {
-        this.title = wolfdelete;
+    EnumCommand(String title, int i, CommandExecutable method) {
+        this.title = title;
         this.args = i;
         this.method = method;
     }
+
 
     public String getTitle() {
         return title;
@@ -31,7 +32,11 @@ public enum EnumCommand {
         return method;
     }
 
-    //public boolean checkType(String animal, String action){
-        //return title.equals(animal + action);
-    //}
+    public boolean checkType(String typeAnimal, String operations) {
+        if (title.equals(operations+typeAnimal)) {
+            return true;
+        }
+        else return false;
+    }
+
 }
