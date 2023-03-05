@@ -7,9 +7,15 @@ public class CreateWolfExecutable implements CommandExecutable{
     private Zoo zoo;
     private Wolf wolf;
 
-    public CreateWolfExecutable(Zoo zoo, Wolf wolf) {
+    public CreateWolfExecutable(Zoo zoo, Command command) {
         this.zoo = zoo;
-        this.wolf = wolf;
+        this.wolf = new Wolf(command.getYearInput(), command.getWeightInput(), 4, command.getAnonimParametr());
+    }
+    public CreateWolfExecutable getZoo(Zoo zoo, Command command) {
+        return new CreateWolfExecutable(zoo, command);
+    }
+    public CreateWolfExecutable() {
+
     }
 
     @Override

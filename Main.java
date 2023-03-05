@@ -4,6 +4,9 @@ import Cage.LionCage;
 import Cage.WolfCage;
 import Factory.LionFactory;
 import Factory.WolfFactory;
+import terminal.AnimalCommandParser;
+import terminal.Command;
+import terminal.CommandParser;
 import terminal.TerminalReader;
 import zoo.Zoo;
 
@@ -41,8 +44,9 @@ public class Main {
 
 
         Zoo zoo = new Zoo(wolfInCage, lionInCage, null);
-        TerminalReader terminal = new TerminalReader();
-        terminal.endless(zoo);
+        TerminalReader terminal = new TerminalReader(new AnimalCommandParser());
+        terminal.setZoo(zoo);
+        terminal.endless();
         System.out.println("________________________");
         //System.out.println(wolfInCage);
         //System.out.println(lionInCage);

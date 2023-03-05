@@ -2,63 +2,66 @@ package terminal;
 
 import zoo.Zoo;
 import java.util.Scanner;
+//import parser.CommandParser;
+
+import static terminal.ChekInputData.isChek;
 
 public class TerminalReader {
     private static TerminalReader terminalReader;
     private CommandParser commandParser; //public
+    private CommandExecutable commandExecutable;
+    private Zoo zoo;
 
-    public TerminalReader() {
-        this.commandParser = commandParser;
+    public void setZoo (Zoo zoo){
+        this.zoo = zoo;
     }
 
-    public static TerminalReader newTerminalReader() {//private
+    public TerminalReader(CommandParser commandParser) {
+
+        this.commandParser = commandParser;
+    }
+    public static TerminalReader newTerminalReader(CommandParser commandParser) {//private
         if (terminalReader == null) {
-            terminalReader = new TerminalReader();
+            terminalReader = new TerminalReader(commandParser);
         }
         return terminalReader;
     }
+    private void setCommandExecutable(Command command) {
+        this.commandExecutable = new CommandExecutableFactoryImpl(zoo).create(command);
+    }
 
-    public void endless(Zoo zoo) {
+    public void endless() {
         Scanner scanner = new Scanner(System.in);
 
         while (true) {
-
-            System.out.println("Добрый день. Введите, пожалуйста, через пробел действие с животным('добавить' или 'вывести') и тип животного ('лев' или 'волк')");
+            new Menu();
+            //System.out.println("Добрый день. Введите, пожалуйста, через пробел действие с животным('добавить' или 'вывести') и тип животного ('лев' или 'волк')");
             String input = scanner.nextLine();
 
             if (input.equals("stop")) break;
             if (input.contains("добавить")){
-
-                System.out.println("Введите параметры животного: год рождения, вес, объем гривы(для льва) или окрас(для волка)");
+                new AddMenu();
+                //System.out.println("Введите параметры животного: год рождения, вес, объем гривы(для льва) или окрас(для волка)");
                 String inputAdd = scanner.nextLine();
-                System.out.println(inputAdd);
+                System.out.println(inputAdd);//удалить потом
 
-                input = input +","+inputAdd;
-                System.out.println(input);
+                input = input +" "+inputAdd;
+                System.out.println(input);//удалить потом
             }
-            String[] imputlst = CommandParser.parseCommand(input);
 
-            if (ChekInput(imputlst)){
-                CommandExecutableFactory procedure = new CommandExecutableFactory(zoo);
-                procedure.create(imputlst).execute();
+            if (true){
+                Command comm = this.commandParser.parseCommand(input);
+                this.setCommandExecutable(comm);
+                this.commandExecutable.execute();
+
+
             }
             else{
+                System.out.println("Ошибка");
                 break;
             }
-
         }
         scanner.close();
     }
 
-    boolean ChekInput(String[] lst) {
-        String typeAnimal = lst[1];
-        if (lst[0].equals("добавить") && typeAnimal.equals("лев") || lst[0].equals("добавить") && typeAnimal.equals("волк")) {
-            return true;
-        } else if (lst[0].equals("вывести") && typeAnimal.equals("лев") || lst[0].equals("вывести") && typeAnimal.equals("волк")) {
-            return true;
-        } else {
-            System.out.println("Некорректные данные");
-            return false;
-        }
-    }
 }
