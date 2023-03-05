@@ -39,8 +39,8 @@ public class Zoo {
 
     @Override
     public String toString() {
-        return "Zoo: " +
-                "wolfs: " + wolfCage.toString() +";" +
-                "lions: " + lionCage.toString() ;
+        return "Zoo: \n" +
+                "wolfs: \n" + wolfCage.toString() + "\n" +
+                "lions: \n" + lionCage.toString() ;
     }
 }
