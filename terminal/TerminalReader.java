@@ -41,24 +41,20 @@ public class TerminalReader {
             if (input.equals("stop")) break;
             if (input.contains("добавить")){
                 new AddMenu();
-                //System.out.println("Введите параметры животного: год рождения, вес, объем гривы(для льва) или окрас(для волка)");
-                String inputAdd = scanner.nextLine();
-                //System.out.println(inputAdd);//удалить потом
 
+                String inputAdd = scanner.nextLine();
                 input = input +" "+inputAdd;
-                //System.out.println(input);//удалить потом
             }
 
-            if (true){
+            if (isChek(input)){
                 Command comm = this.commandParser.parseCommand(input);
                 this.setCommandExecutable(comm);
                 this.commandExecutable.execute();
 
-
             }
             else{
                 System.out.println("Ошибка");
-                break;
+                //break;
             }
         }
         scanner.close();

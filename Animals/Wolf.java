@@ -1,8 +1,10 @@
 package Animals;
 
-import java.util.Comparator;
+//import java.util.Comparator;
 
-public class Wolf extends Animal implements Comparator<Wolf> {
+public class Wolf extends Animal
+        //implements Comparator<Wolf>
+        {
     protected String color;
 
     protected static final int MAX_WEIGHT = 55;
@@ -52,31 +54,31 @@ public class Wolf extends Animal implements Comparator<Wolf> {
     }
 
 
-    public int compareTo(Wolf wolf1, Wolf wolf2) {
+    //public int compareTo(Wolf wolf1, Wolf wolf2) {
         //return (wolf1.getYear() - wolf2.getYear());
-        if (wolf1.getYear() > wolf2.getYear()) {
-            return 1;
-        } else if (wolf1.getYear() < wolf2.getYear()) {
-            return -1;
-        } else return 0;
+        //if (wolf1.getYear() > wolf2.getYear()) {
+            //return 1;
+        //} else if (wolf1.getYear() < wolf2.getYear()) {
+           // return -1;
+        //} else return 0;
 
-    }
-    @Override
-    public int compare(Wolf wolf1, Wolf wolf2) {
-        if (wolf1.getWeight() == wolf2.getWeight()) {
+    //}
+    //@Override
+    //public int compare(Wolf wolf1, Wolf wolf2) {
+        //if (wolf1.getWeight() == wolf2.getWeight()) {
 
-            return compareTo(wolf1, wolf2);
-
-
-        } else {
-            if (wolf1.getWeight() > wolf2.getWeight()) {
-
-                return 1;
-            } else if (wolf1.getWeight() < wolf2.getWeight()) {
-                return -1;
-            } else return 0;
-        }
+            //return compareTo(wolf1, wolf2);
 
 
-    }
+        //} else {
+            //if (wolf1.getWeight() > wolf2.getWeight()) {
+
+                //return 1;
+            //} else if (wolf1.getWeight() < wolf2.getWeight()) {
+                //return -1;
+            //} else return 0;
+        //}
+
+
+    //}
 }

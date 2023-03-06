@@ -1,21 +1,18 @@
 package terminal;
 
 public enum EnumCommand {
-    WOLF_DELETE("вывестиволк", 2, new DeleteWolfExecutable()),
-    WOLF_CREATE("добавитьволк", 6, new CreateWolfExecutable()),
-    LION_DELETE("вывестилев", 2, new DeleteLionExecutable()),
-    LION_CREATE("добавитьлев", 6, new CreateLionExecutable()),
+    WOLF_DELETE("вывестиволк",  new DeleteWolfExecutable()),
+    WOLF_CREATE("добавитьволк",  new CreateWolfExecutable()),
+    LION_DELETE("вывестилев",  new DeleteLionExecutable()),
+    LION_CREATE("добавитьлев",  new CreateLionExecutable()),
     ;
 
     private final String title;
 
-    private final int args;
-
     private CommandExecutable method;
 
-    EnumCommand(String title, int i, CommandExecutable method) {
+    EnumCommand(String title, CommandExecutable method) {
         this.title = title;
-        this.args = i;
         this.method = method;
     }
 
@@ -24,9 +21,6 @@ public enum EnumCommand {
         return title;
     }
 
-    public int getArgs() {
-        return args;
-    }
 
     public CommandExecutable getMethod() {
         return method;
