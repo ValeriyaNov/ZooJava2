@@ -35,7 +35,7 @@ public class TerminalReader {
 
         while (true) {
             new Menu();
-            //System.out.println("Добрый день. Введите, пожалуйста, через пробел действие с животным('добавить' или 'вывести') и тип животного ('лев' или 'волк')");
+
             String input = scanner.nextLine();
 
             if (input.equals("stop")) break;
@@ -54,7 +54,7 @@ public class TerminalReader {
             }
             else{
                 System.out.println("Ошибка");
-                //break;
+
             }
         }
         scanner.close();

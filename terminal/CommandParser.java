@@ -5,7 +5,7 @@ import java.util.ArrayList;
 import java.util.Arrays;
 
 public interface CommandParser {
-    default Command parseCommand(String inputLst) { //здесь я подаю строку или только с командой или с командой и параметрами
+    default Command parseCommand(String inputLst) {
 
             String[] input = inputLst.split("\\s+");
             String operation = input[0];

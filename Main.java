@@ -4,14 +4,11 @@ import Cage.LionCage;
 import Cage.WolfCage;
 import Factory.LionFactory;
 import Factory.WolfFactory;
-import terminal.AnimalCommandParser;
-import terminal.Command;
-import terminal.CommandParser;
-import terminal.TerminalReader;
+import terminal.*;
 import zoo.Zoo;
 
 import java.util.ArrayList;
-//Необходимо все данные вводить в консоль через запятую без пробела
+
 
 public class Main {
     public static void main(String[] args) {
@@ -50,6 +47,7 @@ public class Main {
         terminal.endless();
         System.out.println("________________________");
         System.out.println(zoo.toString());
+
         //System.out.println(wolfInCage);
         //System.out.println(lionInCage);
         //for (Wolf wolf : wolfInCage) {
