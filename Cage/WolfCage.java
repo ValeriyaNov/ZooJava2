@@ -1,6 +1,6 @@
 package Cage;
 
-import Animals.*;
+import animals.*;
 
 import java.util.*;
 

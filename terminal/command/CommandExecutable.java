@@ -1,4 +1,4 @@
-package terminal;
+package terminal.command;
 
 import zoo.Zoo;
 

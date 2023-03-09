@@ -1,4 +1,4 @@
-package terminal;
+package terminal.menu;
 
 public abstract class Messages {
     protected String message;

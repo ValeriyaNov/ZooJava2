@@ -1,8 +1,10 @@
-package terminal;
+package terminal.animalExecutable;
 
+import terminal.command.Command;
+import terminal.command.CommandExecutable;
 import zoo.Zoo;
 
-public class DeleteLionExecutable implements CommandExecutable{
+public class DeleteLionExecutable implements CommandExecutable {
     private Zoo zoo;
 
     public DeleteLionExecutable(Zoo zoo){

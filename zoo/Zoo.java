@@ -1,11 +1,9 @@
 package zoo;
 
-import Animals.Lion;
-import Animals.Snake;
-import Animals.Wolf;
+import animals.Lion;
+import animals.Snake;
+import animals.Wolf;
 import Cage.AnimalCage;
-import Cage.LionCage;
-import Cage.WolfCage;
 
 public class Zoo {
     private AnimalCage<Wolf> wolfCage;

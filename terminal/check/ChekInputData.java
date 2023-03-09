@@ -1,7 +1,7 @@
-package terminal;
+package terminal.check;
 
 import static java.lang.Character.isDigit;
-import static terminal.ChekDigit.isDigital;
+import static terminal.check.ChekDigit.isDigital;
 
 
 public class ChekInputData {

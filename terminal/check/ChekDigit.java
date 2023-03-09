@@ -1,4 +1,4 @@
-package terminal;
+package terminal.check;
 
 public class ChekDigit {
     public static boolean isDigital(String numberStr){

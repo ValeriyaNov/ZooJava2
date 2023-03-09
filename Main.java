@@ -1,10 +1,11 @@
-import Animals.Wolf;
-import Animals.Lion;
+import animals.Wolf;
+import animals.Lion;
 import Cage.LionCage;
 import Cage.WolfCage;
 import Factory.LionFactory;
 import Factory.WolfFactory;
 import terminal.*;
+import terminal.command.AnimalCommandParser;
 import zoo.Zoo;
 
 import java.util.ArrayList;

@@ -1,9 +1,11 @@
-package terminal;
+package terminal.animalExecutable;
 
-import Animals.Wolf;
+import animals.Wolf;
+import terminal.command.Command;
+import terminal.command.CommandExecutable;
 import zoo.Zoo;
 
-public class CreateWolfExecutable implements CommandExecutable{
+public class CreateWolfExecutable implements CommandExecutable {
     private Zoo zoo;
     private Wolf wolf;
 

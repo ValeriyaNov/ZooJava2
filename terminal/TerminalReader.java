@@ -1,10 +1,16 @@
 package terminal;
 
+import terminal.command.Command;
+import terminal.command.CommandExecutable;
+import terminal.command.CommandParser;
+import terminal.factory.CommandExecutableFactoryImpl;
+import terminal.menu.AddMenu;
+import terminal.menu.Menu;
 import zoo.Zoo;
 import java.util.Scanner;
 //import parser.CommandParser;
 
-import static terminal.ChekInputData.isChek;
+import static terminal.check.ChekInputData.isChek;
 
 public class TerminalReader {
     private static TerminalReader terminalReader;

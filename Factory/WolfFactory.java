@@ -1,6 +1,6 @@
 package Factory;
 
-import Animals.Wolf;
+import animals.Wolf;
 
 import java.util.ArrayList;
 import java.util.Arrays;

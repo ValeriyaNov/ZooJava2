@@ -1,6 +1,6 @@
 package Cage;
 
-import Animals.Lion;
+import animals.Lion;
 
 import java.util.ArrayList;
 import java.util.Random;

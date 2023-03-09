@@ -1,8 +1,10 @@
-package terminal;
+package terminal.factory;
 
+import terminal.command.Command;
+import terminal.command.CommandExecutable;
 import zoo.Zoo;
 
-public class LogingCommandExecutableFactor extends CommandExecutableFactoryImpl{
+public class LogingCommandExecutableFactor extends CommandExecutableFactoryImpl {
     public LogingCommandExecutableFactor(Zoo zoo) {
         super(zoo);
     }

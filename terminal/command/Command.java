@@ -1,4 +1,4 @@
-package terminal;
+package terminal.command;
 
 public class Command {
     public static final String WOLF_CREATE = "добавитьволк";

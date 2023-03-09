@@ -1,11 +1,10 @@
 package Cage;
 
-import Animals.Animal;
+import animals.Animal;
 import animalUtils.AgeComparator;
 
 import java.util.ArrayList;
 import java.util.Collections;
-import java.util.List;
 
 public interface AnimalCage<T extends Animal> {
 

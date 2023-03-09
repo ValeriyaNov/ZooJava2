@@ -1,8 +1,6 @@
-package terminal;
+package terminal.command;
 
-import java.io.IOException;
-import java.util.ArrayList;
-import java.util.Arrays;
+import terminal.command.Command;
 
 public interface CommandParser {
     default Command parseCommand(String inputLst) {

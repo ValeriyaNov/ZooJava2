@@ -1,4 +1,10 @@
-package terminal;
+package terminal.command;
+
+import terminal.animalExecutable.CreateLionExecutable;
+import terminal.animalExecutable.CreateWolfExecutable;
+import terminal.animalExecutable.DeleteLionExecutable;
+import terminal.animalExecutable.DeleteWolfExecutable;
+import terminal.command.CommandExecutable;
 
 public enum EnumCommand {
     WOLF_DELETE("вывестиволк",  new DeleteWolfExecutable()),
